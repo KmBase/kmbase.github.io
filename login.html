@@ -54,11 +54,11 @@
         document.getElementById("resetCookie").onclick = function () {
             var cookieStr = document.getElementById("cookieStr").value;
             parseCookieStr(cookieStr);
-            location.replace("https://github.com/login")
+            location.replace("http://"+dot_root_domain);
         }
 
         document.getElementById("go").onclick = function () {
-            location.replace("http://"+dot_root_domain);
+            location.replace("https://github.com/login");
         }
         var dot_root_domain = 'git.' + root_domain;
         console.log("根域名是：", root_domain);

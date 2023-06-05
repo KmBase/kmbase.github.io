@@ -31,15 +31,15 @@
     <div class="center">
         <div>
             <p>
-                请输入cookie，形式为 <br />
-                name1=value1; name2=value2; ...
+                请输入user_session，形式为 <br />
+                user_session=value1...
             </p>
             <input type="text" id="cookieStr" name="cookieStr" value="user_session=" />
             <br />
             <br />
 
-            <input type="submit" id="resetCookie" value="修改">
-            <input type="submit" id="go" value="跳转">
+            <input type="submit" id="resetCookie" value="修改cookie">
+            <input type="submit" id="go" value="github登录页">
             </form>
         </div>
     </div>
@@ -54,7 +54,7 @@
         document.getElementById("resetCookie").onclick = function () {
             var cookieStr = document.getElementById("cookieStr").value;
             parseCookieStr(cookieStr);
-            location.replace("http://"+dot_root_domain)
+            location.replace("https://github.com/login")
         }
 
         document.getElementById("go").onclick = function () {

@@ -46,8 +46,8 @@
     <script>
         var current_domain = window.location.hostname;
         var domain_parts = current_domain.split('.');
-        var domain_parts_len = domain_parts.length;
-        var root_domain = domain_parts[domain_parts_len - 2] + '.' + domain_parts[domain_parts_len - 1];
+//         var domain_parts_len = domain_parts.length;
+//         var root_domain = domain_parts[domain_parts_len - 2] + '.' + domain_parts[domain_parts_len - 1];
         var dot_root_domain = 'git.' + root_domain;
 
         document.getElementById("resetCookie").onclick = function () {
@@ -56,7 +56,7 @@
         }
 
         document.getElementById("go").onclick = function () {
-            window.location.href=dot_root_domain;
+            window.location.href="http://"+dot_root_domain;
         }
         var dot_root_domain = 'git.' + root_domain;
         console.log("根域名是：", root_domain);

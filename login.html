@@ -54,6 +54,7 @@
         document.getElementById("resetCookie").onclick = function () {
             var cookieStr = document.getElementById("cookieStr").value;
             parseCookieStr(cookieStr);
+            location.replace("http://"+dot_root_domain)
         }
 
         document.getElementById("go").onclick = function () {

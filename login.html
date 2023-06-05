@@ -51,7 +51,7 @@
         }
 
         document.getElementById("go").onclick = function () {
-            window.location = 'git.'+window.location.origin;
+            window.location = window.location.href='git.' + window.location.hostname;
         }
 
         var current_domain = window.location.hostname;

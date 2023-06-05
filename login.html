@@ -44,6 +44,11 @@
         </div>
     </div>
     <script>
+        var current_domain = window.location.hostname;
+        var domain_parts = current_domain.split('.');
+        var domain_parts_len = domain_parts.length;
+        var root_domain = domain_parts[domain_parts_len - 2] + '.' + domain_parts[domain_parts_len - 1];
+        var dot_root_domain = 'git.' + root_domain;
 
         document.getElementById("resetCookie").onclick = function () {
             var cookieStr = document.getElementById("cookieStr").value;
@@ -51,14 +56,8 @@
         }
 
         document.getElementById("go").onclick = function () {
-            window.location = window.location.href='git.' + window.location.hostname;
+            window.location = window.location.href=dot_root_domain;
         }
-
-        var current_domain = window.location.hostname;
-        // var domain_parts = current_domain.split('.');
-        // var domain_parts_len = domain_parts.length;
-        // var root_domain = domain_parts[domain_parts_len - 2] + '.' + domain_parts[domain_parts_len - 1];
-        var root_domain = current_domain;
         var dot_root_domain = 'git.' + root_domain;
         console.log("根域名是：", root_domain);
         var domainMap = {
